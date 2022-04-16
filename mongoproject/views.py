@@ -54,9 +54,24 @@ def business_delete(request, id):
 def reviews_insert(request):
     body_unicode = request.body.decode('utf-8')
     body = json.loads(body_unicode)
-    print(body)
-    #content = body['content']
+
     reviews_collection_name.insert_one(body)
-    #find = reviews_collection_name.find_one()
-    #print(content)
+
     return HttpResponse(status=200)
+
+def business_find(request, id):
+
+    dictlist = []
+    for d in business_collection_name.find({"business_id": str(id)}, {'_id': 0}).limit(1):
+        dictlist.append(d)
+
+    return HttpResponse(json.dumps(dictlist))
+
+def review_find(request, id):
+
+    dictlist = []
+    for d in reviews_collection_name.find({"review_id": str(id)}, {'_id': 0}).limit(1):
+        dictlist.append(d)
+
+    print(dictlist)
+    return HttpResponse(json.dumps(dictlist))
