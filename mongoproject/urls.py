@@ -24,5 +24,7 @@ urlpatterns = [
     path('business/<id>/open/<open>/', views.business_isopen, name='business_isopen'),
     path('business/<id>/delete', views.business_delete, name='business_delete'),
     path('reviews/insert/', views.reviews_insert, name='reviews_insert'),
+    path('business/<id>/', views.business_find, name='business_find'),
+    path('reviews/<id>/', views.review_find, name='review_find'),
 
 ]
