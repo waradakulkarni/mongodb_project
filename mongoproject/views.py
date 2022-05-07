@@ -17,7 +17,7 @@ client = MongoClient(uri)
 #my_client = pymongo.MongoClient(settings.DB_NAME)
 
 # First define the database name
-dbname = client['dummy']
+dbname = client['yelp']
 
 # Now get/create collection name (remember that you will see the database in your mongodb cluster only after you create a collection)
 business_collection_name = dbname["business"]
