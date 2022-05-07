@@ -17,7 +17,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-lf=%3wwmd&vdn04al8z)1i%$x8zijw@(uh&=&l%r2yrlwk6t7n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-54-224-111-187.compute-1.amazonaws.com','localhost']
+ALLOWED_HOSTS = ['localhost', 'ec2-54-161-172-165.compute-1.amazonaws.com', 'ec2-54-174-38-160.compute-1.amazonaws.com']
 
 
 # Application definition
@@ -125,3 +125,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
